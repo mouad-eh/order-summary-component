@@ -1,85 +1,78 @@
 body{
-    margin: 0%;
-    padding: 0%;
-    text-align: center;
-    background-image: url(images/pattern-background-desktop.svg);
+    padding: 0;
+    margin: 0;
+    background-image: url(images/pattern-background-mobile.svg);
     background-repeat: no-repeat;
     background-color: hsl(225, 100%, 94%);
     font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
 }
 
-#card{
-    border-radius: 20px;
-    margin: 10vh 32vw;
+.card{
+    width: 90%;
+    margin: 2rem auto;
+    /* box-shadow: 0 0 10px black; */
     background-color: white;
+    border-radius: 1.5rem;
 }
-#card #illustration-hero{
+.card > img{
     width: 100%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+    margin-bottom: 1em;
 }
-#card h3{
-    margin-top: 40px;
+.card h3{
+    font-size: 1.25em;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
 }
-#card > p{
+.card > p{
     color: hsl(224, 23%, 55%);
-    margin: auto 25px 25px;
+    margin: 1.5rem 2rem;
 }
-#card #annual-plan{
+.annual-plan{
     background-color: hsl(225, 100%, 98%);
-    border-radius: 10px;
     display: flex;
-    align-items: baseline;
-    height: 100px;
-    margin: auto 15% 25px;
-    text-align: start;
+    width: 80%;
+    margin: auto auto;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
 }
-#annual-plan img{
-    margin: auto 5%;
-}
-#annual-plan #some-text {
+.annual-plan img{
     margin: auto 0;
 }
-#annual-plan #some-text h5{
+.annual-plan .some-text{
+    margin: auto 1.5rem;
+    text-align: start;
+}
+.annual-plan .some-text h5{
     margin: 0;
+    color: hsl(223, 47%, 23%);
+    font-weight: 700;
 }
-#annual-plan #some-text p{
+.annual-plan .some-text p{
     margin: 0;
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
 }
-#annual-plan a{
-    display: block;
-    /* text-decoration: none; */
-    /* color: hsl(224, 23%, 55%); */
-    margin: auto 5% auto auto;
+.annual-plan a{
+    margin: auto 0 auto auto;
 }
-#annual-plan a:hover{
-    color: hsl(245, 57%, 63%);
-    text-decoration: none;
-}
-#card button{
-    color:white;
+.card button{
+    width: 87%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    color: white;
     background-color: hsl(245, 75%, 52%);
     border: none;
-    padding: 10px;
-    width: 70%;
-    border-radius: 10px;
-    box-shadow: 0 5px 30px hsl(224, 21%, 56%);
-    padding: 15px;
+    border-radius: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 0.25rem 1rem 0.75rem hsl(225, 100%, 94%);
 }
-#card button:hover{
-    background-color: hsl(245, 57%, 63%);
-}
-#card > a {
+.card a {
     display: block;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+    color:hsl(224, 23%, 55%);
     text-decoration: none;
-    color: hsl(224, 23%, 55%);
-    padding: 20px;
-    padding-top: 30px;
-    padding-bottom: 50px;
-}
-#card > a:hover{
-    color: darkblue;
-}
-.attribution{
-    margin: 0;
-    padding: 5px;
+    font-weight: 700;
 }
