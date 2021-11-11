@@ -1,54 +1,79 @@
-body{
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
     padding: 0;
     margin: 0;
+}
+
+body{
     background-image: url(images/pattern-background-mobile.svg);
     background-repeat: no-repeat;
     background-color: hsl(225, 100%, 94%);
     font-family: 'Red Hat Display', sans-serif;
     text-align: center;
 }
-.card{
+
+main{
     width: 90%;
-    margin: 2rem auto;
+    max-width: 400px;
     background-color: white;
     border-radius: 1.5rem;
+    margin: 2rem auto; /**/
 }
-.card > img{
+
+footer{
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+main > img{
     width: 100%;
     border-radius: 1.5rem 1.5rem 0 0;
-    margin-bottom: 1em;
+    vertical-align: middle; /*remove that 3px default margin bottom in an img*/
 }
-.card h3{
-    font-size: 1.25em;
+main .card-content{
+    padding: 2rem 1.5rem;
+}
+
+.card-content h2{
+    font-size: 1.3em;
     font-weight: 900;
     color: hsl(223, 47%, 23%);
 }
-.card > p{
+.card-content > p{
     color: hsl(224, 23%, 55%);
-    margin: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    line-height: 1.5rem;
 }
 .annual-plan{
     background-color: hsl(225, 100%, 98%);
     display: flex;
-    width: 80%;
-    margin: auto auto;
+    align-items: center;
     border-radius: 0.5rem;
     padding: 0.8rem;
 }
-.annual-plan img{
-    margin: auto 0;
-}
-.annual-plan .some-text{
+.annual-plan-card .middle-element{
     margin: auto auto auto 1.25rem;
     text-align: start;
 }
-.annual-plan .some-text h5{
-    margin: 0;
+.middle-element{
+    margin-left: 1rem;
+}
+.middle-element :first-child{
+    margin-bottom: 0.2rem;
     color: hsl(223, 47%, 23%);
     font-weight: 700;
 }
-.annual-plan .some-text p{
-    margin: 0;
+.middle-element :last-child{
     color: hsl(224, 23%, 55%);
     font-weight: 500;
 }
@@ -60,9 +85,10 @@ body{
     color: hsl(245, 75%, 52%,0.75);
     text-decoration: none;
 }
-.card button{
-    width: 86.5%;
+
+.card-content button{
     margin: 1.5rem auto;
+    width: 100%;
     padding: 1rem;
     color: white;
     background-color: hsl(245, 75%, 52%);
@@ -70,47 +96,37 @@ body{
     border-radius: 0.8rem;
     font-family: inherit;
     font-weight: 700;
-    box-shadow: 0 0.5rem 0.5rem 0.25rem hsl(225, 100%, 94%);
+    box-shadow: 0 0.75rem 0.5rem 0.25rem hsl(225, 100%, 94%);
 }
-.card button:hover{
+.card-content button:hover{
     background-color: hsl(245, 75%, 52%,0.75);
 }
-.card > a {
-    display: block;
-    padding: 1rem;
-    padding-bottom: 2.5rem;
+
+.card-content > a{
     color:hsl(224, 23%, 55%);
     text-decoration: none;
     font-weight: 700;
-}
-.card > a:hover{
-    color:hsl(223, 47%, 23%);
-}
-.attribution{
-    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-@media (min-width: 375px) {
+.card-content > a:hover{
+    color:hsl(223, 47%, 23%);
+}
+
+@media (min-width: 374px) {
     body{ 
         background-image: url(images/pattern-background-desktop.svg);
         background-repeat: no-repeat;
     }
 }
-@media (min-width: 481px){
-    .card{
-        width: 70%;
-        margin: 2rem auto;
+@media (min-width: 650px){
+    body{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}
-@media (min-width: 768px){
-    .card{
-        width: 50%;
-        margin: 3rem auto;
-    }
-}
-@media (min-width: 1024px){
-    .card{
-        width: 30%;
-        margin: 4rem auto;
+    main .card-content{
+        padding: 2.5rem 2.5rem;
     }
 }
